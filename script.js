@@ -65,7 +65,16 @@ const givenNumString = (groupString, num) => {
 
 console.log(givenNumString(lambChop, 2));
 // Optional- Take a number n, and pring every number between 1 and n without using loops. Use recursion.
-
+const printNumbersToN = (n) => {
+    if (n >= 1) {
+      printNumbersToN(n - 1);
+      console.log(n);
+    }
+  }
+  
+  // Example usage:
+  
+  printNumbersToN(50);
 
 /**
  * Part 2: Thinking Methodically
@@ -156,7 +165,7 @@ const addAge = (Person) =>{
   
 
   const employee = { name: "Alice" };
-  const copiedEmployee = copyAndAddAge(originalObject);
+  const copiedEmployee = copyAndAddAge(employee);
   
   console.log(employee); // Original object remains unchanged
   console.log(copiedEmployee);   // Copied object with incremented age
