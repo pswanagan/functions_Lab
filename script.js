@@ -107,4 +107,28 @@ console.log(averageOfAges + ` is the average of the ages`);
  * 
  */
 
+/**
+ * Take an object and increment its age field.
+ *Take an object, make a copy, and increment the age field of the copy. Return the copy.
+ *For each of the functions above, if the object does not yet contain an age field, create one and set it to 0. Also, add (or modify, as appropriate) an updated_at field that *stores a Date object with the current time.
+ */
 
+ // Take an object and increment its age field.
+
+const addAge = (Person) =>{
+    if (!Person.hasOwnProperty('age')) {
+        Person.age = 0;
+    }else {
+        Person.age++;
+    }
+  
+    
+    Person.updated_at = new Date();
+  
+    return Person;
+  }
+  
+  // Example usage:
+  const myPerson = { name: "John" };
+  addAge(myPerson);
+  console.log(myPerson);
